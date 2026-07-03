@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style data-omelette-print-defaults>
+@media print {
+  @page { margin: 0.5in; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  figure, table, pre, blockquote, img, svg, tr, [class~="card" i] { break-inside: avoid; }
+  img, svg { max-width: 100%; }
+  p { orphans: 3; widows: 3; }
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0E0C08;color:#F2ECE0;font-family:'Jost',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:#C6A15B;color:#0E0C08}
+img{display:block}
+a{color:inherit}
+input,button{font-family:inherit}
+::-webkit-scrollbar{height:8px;width:8px}
+::-webkit-scrollbar-thumb{background:rgba(198,161,91,.35);border-radius:8px}
+@keyframes floatUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes shine{to{background-position:200% center}}
+@keyframes glowPulse{0%,100%{opacity:.5}50%{opacity:.9}}
+</style>
+</helmet>
+
+<div style="max-width:100%;overflow-x:hidden;background:#0E0C08">
+
+<!-- ============ TOP BAR ============ -->
+<div style="background:#0A0906;border-bottom:1px solid rgba(198,161,91,.14)">
+  <div style="max-width:1280px;margin:0 auto;padding:9px clamp(18px,5vw,60px);display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;justify-content:space-between;font-size:13px;color:rgba(242,236,224,.62);letter-spacing:.02em">
+    <div style="display:flex;align-items:center;gap:9px"><span style="color:#C6A15B">⌖</span> г. Махачкала, ул. Гамидова 16г</div>
+    <div style="display:flex;align-items:center;gap:22px">
+      <span style="display:flex;align-items:center;gap:8px"><span style="color:#C6A15B">✦</span> Работаем без выходных · 8:00–20:00</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER / NAV ============ -->
+<header style="position:sticky;top:0;z-index:40;background:rgba(14,12,8,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(198,161,91,.16)">
+  <div style="max-width:1280px;margin:0 auto;padding:14px clamp(18px,5vw,60px);display:flex;align-items:center;gap:20px;justify-content:space-between">
+    <a href="#home" style="display:flex;align-items:center;gap:13px;text-decoration:none;flex:none">
+      <span style="width:42px;height:42px;border:1.5px solid #C6A15B;border-radius:50%;display:grid;place-items:center;color:#E4C883;font-family:'Playfair Display',serif;font-size:22px;font-weight:700">R</span>
+      <span style="display:flex;flex-direction:column;line-height:1">
+        <span style="font-family:'Playfair Display',serif;font-size:23px;font-weight:700;letter-spacing:.28em;color:#F2ECE0">ROYAL</span>
+        <span style="font-size:9.5px;letter-spacing:.42em;color:#C6A15B;margin-top:4px">НАТЯЖНЫЕ ПОТОЛКИ</span>
+      </span>
+    </a>
+    <nav style="flex:1;min-width:0;display:flex;gap:26px;justify-content:center;overflow-x:auto;padding:4px 0;scrollbar-width:none">
+      <a href="#preimushestva" style="text-decoration:none;color:rgba(242,236,224,.72);font-size:14px;white-space:nowrap;letter-spacing:.02em" style-hover="color:#E4C883">Преимущества</a>
+      <a href="#vidy" style="text-decoration:none;color:rgba(242,236,224,.72);font-size:14px;white-space:nowrap" style-hover="color:#E4C883">Виды потолков</a>
+      <a href="#calc" style="text-decoration:none;color:rgba(242,236,224,.72);font-size:14px;white-space:nowrap" style-hover="color:#E4C883">Калькулятор</a>
+      <a href="#gallery" style="text-decoration:none;color:rgba(242,236,224,.72);font-size:14px;white-space:nowrap" style-hover="color:#E4C883">Работы</a>
+      <a href="#raschety" style="text-decoration:none;color:rgba(242,236,224,.72);font-size:14px;white-space:nowrap" style-hover="color:#E4C883">Цены</a>
+      <a href="#otzyvy" style="text-decoration:none;color:rgba(242,236,224,.72);font-size:14px;white-space:nowrap" style-hover="color:#E4C883">Отзывы</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:16px;flex:none">
+      <a href="tel:+79882925099" style="text-decoration:none;text-align:right;line-height:1.2;display:none" style-hover="opacity:.8"></a>
+      <div style="text-align:right;line-height:1.25">
+        <a href="tel:+79882925099" style="text-decoration:none;font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:#F2ECE0;letter-spacing:.01em">8 (988) 292-50-99</a>
+        <div style="font-size:11px;color:rgba(242,236,224,.5);letter-spacing:.08em;margin-top:1px">Бесплатный замер</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" style="position:relative;overflow:hidden;background:radial-gradient(120% 90% at 78% 8%,#2a2113 0%,#15110a 42%,#0B0906 100%)">
+  <div style="position:absolute;inset:0;background-image:url('https://potolki-royal.ru/wp-content/uploads/2018/02/333-770x440.png');background-size:cover;background-position:center;opacity:.16;mix-blend-mode:luminosity"></div>
+  <div style="position:absolute;top:-140px;right:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(198,161,91,.28),transparent 62%);filter:blur(20px);animation:glowPulse 6s ease-in-out infinite"></div>
+  <div style="position:relative;max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,110px) clamp(18px,5vw,60px) clamp(60px,7vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:clamp(36px,5vw,64px);align-items:center">
+    <div style="animation:floatUp .8s both">
+      <div style="display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border:1px solid rgba(198,161,91,.4);border-radius:100px;font-size:12.5px;letter-spacing:.18em;color:#E4C883;text-transform:uppercase;margin-bottom:26px">✦ 18 лет мастерства</div>
+      <h1 style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(38px,5.6vw,68px);line-height:1.04;margin:0 0 22px;color:#F6F0E4;letter-spacing:-.01em">Натяжные потолки<br><span style="font-style:italic;font-weight:500;background:linear-gradient(135deg,#EAD199,#C6A15B 55%,#9C7635);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">с фотопечатью</span></h1>
+      <p style="font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:rgba(242,236,224,.72);max-width:520px;margin:0 0 8px">Европейские полотна, пожизненная гарантия и монтаж за один день. Превращаем потолок в произведение искусства.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px 30px;margin:30px 0 36px">
+        <div style="display:flex;align-items:baseline;gap:10px"><span style="font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:#E4C883">от 1000 ₽</span><span style="font-size:14px;color:rgba(242,236,224,.6)">за 1 м² с установкой</span></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+        <a href="#zayavka" style="text-decoration:none;padding:16px 34px;border-radius:100px;background:linear-gradient(135deg,#EAD199,#C6A15B 55%,#A8813C);color:#1a1409;font-weight:600;font-size:15.5px;letter-spacing:.03em;box-shadow:0 10px 30px -8px rgba(198,161,91,.55)" style-hover="transform:translateY(-2px);box-shadow:0 16px 38px -8px rgba(198,161,91,.7)">Заказать потолок</a>
+        <a href="#calc" style="text-decoration:none;padding:16px 30px;border-radius:100px;border:1px solid rgba(198,161,91,.45);color:#F2ECE0;font-size:15px" style-hover="background:rgba(198,161,91,.1)">Рассчитать стоимость</a>
+      </div>
+      <p style="margin:24px 0 0;font-size:13px;color:rgba(242,236,224,.5)">🎁 При заказе от 50 м² — узор под люстру в подарок</p>
+    </div>
+
+    <div style="animation:floatUp 1s .15s both;display:flex;justify-content:center">
+      <div style="width:100%;max-width:440px;background:linear-gradient(160deg,rgba(32,25,14,.9),rgba(18,14,9,.92));border:1px solid rgba(198,161,91,.28);border-radius:20px;padding:clamp(26px,3vw,36px);box-shadow:0 30px 70px -30px rgba(0,0,0,.8)">
+        <div style="font-family:'Playfair Display',serif;font-size:24px;color:#F6F0E4;margin-bottom:6px">Бесплатный замер сегодня</div>
+        <p style="font-size:13.5px;color:rgba(242,236,224,.6);margin:0 0 22px">Оставьте номер — перезвоним в течение 15 минут и рассчитаем точную цену.</p>
+        <a href="#zayavka" style="display:block;text-align:center;text-decoration:none;padding:15px;border-radius:12px;background:linear-gradient(135deg,#EAD199,#C6A15B 55%,#A8813C);color:#1a1409;font-weight:600;font-size:15px;margin-bottom:18px">Оставить заявку →</a>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div style="text-align:center;padding:14px 8px;background:rgba(198,161,91,.07);border-radius:12px"><div style="font-family:'Playfair Display',serif;font-size:26px;color:#E4C883">6 часов</div><div style="font-size:11.5px;color:rgba(242,236,224,.55);margin-top:2px">от замера до монтажа</div></div>
+          <div style="text-align:center;padding:14px 8px;background:rgba(198,161,91,.07);border-radius:12px"><div style="font-family:'Playfair Display',serif;font-size:26px;color:#E4C883">∞</div><div style="font-size:11.5px;color:rgba(242,236,224,.55);margin-top:2px">пожизненная гарантия</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section style="background:#0A0906;border-top:1px solid rgba(198,161,91,.14);border-bottom:1px solid rgba(198,161,91,.14)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(30px,4vw,46px) clamp(18px,5vw,60px);display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px">
+    <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+      <div style="text-align:center;position:relative">
+        <div style="font-family:'Playfair Display',serif;font-size:clamp(40px,4vw,56px);font-weight:700;line-height:1;background:linear-gradient(135deg,#EAD199,#C6A15B);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">{{ s.num }}</div>
+        <div style="font-size:13.5px;color:rgba(242,236,224,.62);margin-top:10px;letter-spacing:.03em">{{ s.label }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- ============ ADVANTAGES ============ -->
+<section id="preimushestva" style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(18px,5vw,60px)">
+  <div style="text-align:center;margin-bottom:clamp(40px,5vw,60px)">
+    <div style="font-size:12.5px;letter-spacing:.28em;color:#C6A15B;text-transform:uppercase;margin-bottom:14px">Почему Royal</div>
+    <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,4vw,46px);margin:0;color:#F6F0E4">Шесть причин доверять нам</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px">
+    <sc-for list="{{ advantages }}" as="a" hint-placeholder-count="6">
+      <div style="padding:32px 30px;background:linear-gradient(165deg,rgba(28,22,13,.7),rgba(16,13,8,.7));border:1px solid rgba(198,161,91,.16);border-radius:16px" style-hover="border-color:rgba(198,161,91,.42);transform:translateY(-3px)">
+        <div style="width:52px;height:52px;border-radius:13px;background:rgba(198,161,91,.12);display:grid;place-items:center;font-size:24px;margin-bottom:20px">{{ a.icon }}</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:21px;font-weight:600;margin:0 0 12px;color:#F2ECE0;line-height:1.25">{{ a.title }}</h3>
+        <p style="font-size:14.5px;line-height:1.6;color:rgba(242,236,224,.62);margin:0">{{ a.text }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- ============ TYPES ============ -->
+<section id="vidy" style="background:#0A0906;border-top:1px solid rgba(198,161,91,.14)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(18px,5vw,60px)">
+    <div style="text-align:center;margin-bottom:clamp(40px,5vw,60px)">
+      <div style="font-size:12.5px;letter-spacing:.28em;color:#C6A15B;text-transform:uppercase;margin-bottom:14px">Каталог</div>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,4vw,46px);margin:0;color:#F6F0E4">Виды потолков</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px">
+      <sc-for list="{{ types }}" as="t" hint-placeholder-count="8">
+        <a href="#zayavka" style="text-decoration:none;display:block;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:1;background:linear-gradient(135deg,#241c11,#14100a)" style-hover="transform:translateY(-4px)">
+          <div style="position:absolute;inset:0;background-image:{{ t.bg }};background-size:cover;background-position:center;transition:transform .5s" style-hover="transform:scale(1.06)"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,6,4,.9) 8%,rgba(8,6,4,.15) 55%,transparent)"></div>
+          <div style="position:absolute;left:0;right:0;bottom:0;padding:20px">
+            <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:#F6F0E4;margin-bottom:6px">{{ t.name }}</div>
+            <div style="font-size:12.5px;color:#E4C883;letter-spacing:.05em">Подробнее →</div>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR ============ -->
+<section id="calc" style="position:relative;background:radial-gradient(90% 120% at 20% 0%,#231b10,#0E0C08 60%)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(18px,5vw,60px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(32px,4vw,56px);align-items:start">
+      <div>
+        <div style="font-size:12.5px;letter-spacing:.28em;color:#C6A15B;text-transform:uppercase;margin-bottom:14px">Онлайн-расчёт</div>
+        <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,4vw,46px);margin:0 0 18px;color:#F6F0E4;line-height:1.1">Калькулятор<br>стоимости потолка</h2>
+        <p style="font-size:15.5px;line-height:1.6;color:rgba(242,236,224,.62);max-width:440px">Двигайте ползунки — цена пересчитывается мгновенно. Итог предварительный; точную стоимость назовёт замерщик бесплатно.</p>
+
+        <!-- area -->
+        <div style="margin-top:34px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
+            <span style="font-size:15px;color:rgba(242,236,224,.85)">Площадь помещения</span>
+            <span style="font-family:'Playfair Display',serif;font-size:22px;color:#E4C883">{{ calcArea }} м²</span>
+          </div>
+          <input type="range" min="6" max="120" step="1" value="{{ calcArea }}" onInput="{{ setArea }}" style="width:100%;accent-color:#C6A15B;height:6px">
+        </div>
+
+        <!-- lights -->
+        <div style="margin-top:28px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px">
+            <span style="font-size:15px;color:rgba(242,236,224,.85)">Точечные светильники</span>
+            <span style="font-family:'Playfair Display',serif;font-size:22px;color:#E4C883">{{ calcLights }} шт</span>
+          </div>
+          <input type="range" min="0" max="24" step="1" value="{{ calcLights }}" onInput="{{ setLights }}" style="width:100%;accent-color:#C6A15B;height:6px">
+        </div>
+
+        <!-- material -->
+        <div style="margin-top:30px">
+          <div style="font-size:15px;color:rgba(242,236,224,.85);margin-bottom:14px">Тип полотна</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px">
+            <sc-for list="{{ materialOpts }}" as="m" hint-placeholder-count="4">
+              <button onClick="{{ m.pick }}" style="{{ m.style }}">
+                <span style="font-size:14.5px;font-weight:500">{{ m.name }}</span>
+                <span style="font-size:12px;opacity:.7;margin-top:3px">{{ m.priceLabel }}</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <!-- result panel -->
+      <div style="position:sticky;top:100px;background:linear-gradient(160deg,rgba(34,26,15,.92),rgba(15,12,8,.95));border:1px solid rgba(198,161,91,.3);border-radius:20px;padding:clamp(28px,3vw,40px);box-shadow:0 30px 70px -30px rgba(0,0,0,.85)">
+        <div style="font-size:13px;letter-spacing:.2em;color:#C6A15B;text-transform:uppercase;margin-bottom:22px">Предварительная смета</div>
+        <div style="display:flex;flex-direction:column;gap:15px;font-size:15px">
+          <div style="display:flex;justify-content:space-between;color:rgba(242,236,224,.72)"><span>Полотно «{{ calcMat }}»</span><span style="color:#F2ECE0">{{ ceilingStr }}</span></div>
+          <div style="display:flex;justify-content:space-between;color:rgba(242,236,224,.5);font-size:13px"><span>Цена за м²</span><span>{{ pricePerM }}</span></div>
+          <div style="display:flex;justify-content:space-between;color:rgba(242,236,224,.72)"><span>Светильники ({{ calcLights }} шт)</span><span style="color:#F2ECE0">{{ lightsStr }}</span></div>
+          <div style="height:1px;background:rgba(198,161,91,.22);margin:6px 0"></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline">
+            <span style="font-size:16px;color:#F6F0E4">Итого</span>
+            <span style="font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,42px);font-weight:700;background:linear-gradient(135deg,#EAD199,#C6A15B);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">{{ totalStr }}</span>
+          </div>
+        </div>
+        <a href="#zayavka" style="display:block;text-align:center;text-decoration:none;margin-top:26px;padding:15px;border-radius:12px;background:linear-gradient(135deg,#EAD199,#C6A15B 55%,#A8813C);color:#1a1409;font-weight:600;font-size:15px">Заказать по этой цене</a>
+        <p style="text-align:center;font-size:12px;color:rgba(242,236,224,.45);margin:14px 0 0">Расчёт ориентировочный · точная цена после замера</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" style="background:#0A0906;border-top:1px solid rgba(198,161,91,.14)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(18px,5vw,60px)">
+    <div style="text-align:center;margin-bottom:clamp(40px,5vw,60px)">
+      <div style="font-size:12.5px;letter-spacing:.28em;color:#C6A15B;text-transform:uppercase;margin-bottom:14px">Портфолио</div>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,4vw,46px);margin:0;color:#F6F0E4">Наши работы</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
+      <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="6">
+        <button onClick="{{ g.open }}" style="border:none;padding:0;cursor:pointer;text-align:left;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,#241c11,#14100a)" style-hover="transform:translateY(-4px)">
+          <div style="position:absolute;inset:0;background-image:{{ g.bg }};background-size:cover;background-position:center;transition:transform .6s" style-hover="transform:scale(1.07)"></div>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(8,6,4,.86),transparent 55%)"></div>
+          <div style="position:absolute;left:0;right:0;bottom:0;padding:20px;display:flex;justify-content:space-between;align-items:flex-end">
+            <span style="font-family:'Playfair Display',serif;font-size:18px;color:#F6F0E4">{{ g.cap }}</span>
+            <span style="width:34px;height:34px;border-radius:50%;background:rgba(198,161,91,.9);color:#1a1409;display:grid;place-items:center;font-size:15px;flex:none">⤢</span>
+          </div>
+        </button>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PATTERNS ============ -->
+<section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(18px,5vw,60px)">
+  <div style="text-align:center;margin-bottom:clamp(40px,5vw,60px)">
+    <div style="font-size:12.5px;letter-spacing:.28em;color:#C6A15B;text-transform:uppercase;margin-bottom:14px">Фотопечать</div>
+    <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,4vw,46px);margin:0 0 12px;color:#F6F0E4">Узоры под люстру</h2>
+    <p style="font-size:15px;color:rgba(242,236,224,.6);max-width:520px;margin:0 auto">Эффектная деталь, которая делает потолок завершённым. При заказе от 50 м² — в подарок.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
+    <sc-for list="{{ patterns }}" as="p" hint-placeholder-count="6">
+      <div style="border-radius:14px;overflow:hidden;aspect-ratio:1;background:radial-gradient(circle,#241c11,#0E0C08);border:1px solid rgba(198,161,91,.16)">
+        <div style="width:100%;height:100%;background-image:{{ p.bg }};background-size:cover;background-position:center"></div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- ============ LIGHTING ============ -->
+<section style="background:#0A0906;border-top:1px solid rgba(198,161,91,.14)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(18px,5vw,60px)">
+    <div style="text-align:center;margin-bottom:clamp(40px,5vw,60px)">
+      <div style="font-size:12.5px;letter-spacing:.28em;color:#C6A15B;text-transform:uppercase;margin-bottom:14px">Комплектующие</div>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,4vw,46px);margin:0;color:#F6F0E4">Освещение</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px">
+      <sc-for list="{{ lighting }}" as="l" hint-placeholder-count="6">
+        <div style="background:linear-gradient(165deg,rgba(28,22,13,.6),rgba(16,13,8,.6));border:1px solid rgba(198,161,91,.16);border-radius:16px;padding:18px;text-align:center" style-hover="border-color:rgba(198,161,91,.4)">
+          <div style="aspect-ratio:1;border-radius:12px;overflow:hidden;background:#fff;margin-bottom:16px"><div style="width:100%;height:100%;background-image:{{ l.bg }};background-size:cover;background-position:center"></div></div>
+          <div style="font-size:14.5px;color:#F2ECE0;line-height:1.35;min-height:38px;display:flex;align-items:center;justify-content:center">{{ l.name }}</div>
+          <a href="#zayavka" style="display:inline-block;text-decoration:none;margin-top:12px;font-size:13px;color:#E4C883;letter-spacing:.05em">Узнать цену →</a>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICE EXAMPLES ============ -->
+<section id="raschety" style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(18px,5vw,60px)">
+  <div style="text-align:center;margin-bottom:clamp(40px,5vw,60px)">
+    <div style="font-size:12.5px;letter-spacing:.28em;color:#C6A15B;text-transform:uppercase;margin-bottom:14px">Прозрачные цены</div>
+    <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,4vw,46px);margin:0;color:#F6F0E4">Примеры расчётов «под ключ»</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+    <sc-for list="{{ examples }}" as="e" hint-placeholder-count="3">
+      <div style="background:linear-gradient(165deg,rgba(28,22,13,.75),rgba(15,12,8,.85));border:1px solid rgba(198,161,91,.2);border-radius:18px;overflow:hidden;display:flex;flex-direction:column">
+        <div style="aspect-ratio:16/10;background-image:{{ e.bg }};background-size:cover;background-position:center"></div>
+        <div style="padding:26px;display:flex;flex-direction:column;flex:1">
+          <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;margin:0 0 16px;color:#F6F0E4;line-height:1.3">{{ e.title }}</h3>
+          <div style="display:flex;flex-direction:column;gap:9px;font-size:13.5px;flex:1">
+            <sc-for list="{{ e.rows }}" as="r" hint-placeholder-count="4">
+              <div style="display:flex;justify-content:space-between;gap:12px;color:rgba(242,236,224,.6);border-bottom:1px dashed rgba(198,161,91,.14);padding-bottom:7px"><span>{{ r.k }}</span><span style="color:rgba(242,236,224,.85);text-align:right">{{ r.v }}</span></div>
+            </sc-for>
+          </div>
+          <div style="display:flex;align-items:baseline;gap:12px;margin-top:22px">
+            <span style="font-size:17px;color:rgba(242,236,224,.4);text-decoration:line-through">{{ e.old }}</span>
+            <span style="font-family:'Playfair Display',serif;font-size:30px;font-weight:700;background:linear-gradient(135deg,#EAD199,#C6A15B);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">{{ e.now }}</span>
+          </div>
+          <a href="#zayavka" style="display:block;text-align:center;text-decoration:none;margin-top:20px;padding:13px;border-radius:11px;border:1px solid rgba(198,161,91,.45);color:#F2ECE0;font-size:14px" style-hover="background:rgba(198,161,91,.1)">Заказать такой же</a>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="otzyvy" style="background:radial-gradient(90% 120% at 80% 0%,#231b10,#0A0906 60%);border-top:1px solid rgba(198,161,91,.14)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(18px,5vw,60px)">
+    <div style="text-align:center;margin-bottom:clamp(40px,5vw,60px)">
+      <div style="font-size:12.5px;letter-spacing:.28em;color:#C6A15B;text-transform:uppercase;margin-bottom:14px">Нам доверяют</div>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(30px,4vw,46px);margin:0;color:#F6F0E4">Отзывы клиентов</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px">
+      <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+        <div style="background:linear-gradient(165deg,rgba(28,22,13,.7),rgba(16,13,8,.7));border:1px solid rgba(198,161,91,.18);border-radius:18px;padding:30px;display:flex;flex-direction:column">
+          <div style="color:#E4C883;font-size:16px;letter-spacing:3px;margin-bottom:16px">★★★★★</div>
+          <p style="font-size:14.5px;line-height:1.65;color:rgba(242,236,224,.75);margin:0 0 22px;flex:1">{{ r.text }}</p>
+          <div style="display:flex;align-items:center;gap:14px;border-top:1px solid rgba(198,161,91,.14);padding-top:18px">
+            <div style="width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#EAD199,#A8813C);display:grid;place-items:center;font-family:'Playfair Display',serif;font-size:20px;color:#1a1409;font-weight:700;flex:none">{{ r.initial }}</div>
+            <div><div style="font-size:15px;color:#F2ECE0;font-weight:500">{{ r.name }}</div><div style="font-size:12.5px;color:#C6A15B">{{ r.tag }}</div></div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEAD FORM + CONTACTS ============ -->
+<section id="zayavka" style="background:#0E0C08">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(18px,5vw,60px);display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(32px,4vw,56px);align-items:stretch">
+    <!-- form -->
+    <div style="background:linear-gradient(160deg,rgba(34,26,15,.9),rgba(15,12,8,.94));border:1px solid rgba(198,161,91,.3);border-radius:22px;padding:clamp(30px,4vw,48px);position:relative;overflow:hidden">
+      <div style="position:absolute;top:-90px;right:-90px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(198,161,91,.22),transparent 65%)"></div>
+      <div style="position:relative">
+        <div style="font-size:12.5px;letter-spacing:.28em;color:#C6A15B;text-transform:uppercase;margin-bottom:14px">Оставьте заявку</div>
+        <h2 style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(26px,3vw,38px);margin:0 0 12px;color:#F6F0E4;line-height:1.15">Бесплатный замер и расчёт <span style="font-style:italic;color:#E4C883">уже сегодня</span></h2>
+        <p style="font-size:14.5px;color:rgba(242,236,224,.6);margin:0 0 28px">Перезвоним в течение 15 минут и ответим на все вопросы.</p>
+
+        <sc-if value="{{ fSent }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:40px 20px;text-align:center">
+            <div style="width:72px;height:72px;margin:0 auto 22px;border-radius:50%;background:linear-gradient(135deg,#EAD199,#A8813C);display:grid;place-items:center;font-size:34px;color:#1a1409">✓</div>
+            <div style="font-family:'Playfair Display',serif;font-size:26px;color:#F6F0E4;margin-bottom:10px">Заявка принята!</div>
+            <p style="font-size:15px;color:rgba(242,236,224,.65);margin:0">Спасибо, {{ fName }}. Наш менеджер свяжется с вами в ближайшие минуты.</p>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:18px">
+            <div>
+              <input value="{{ fName }}" onInput="{{ setName }}" placeholder="Ваше имя" style="{{ nameFieldStyle }}">
+              <sc-if value="{{ errName }}" hint-placeholder-val="{{ false }}"><div style="color:#E88;font-size:12.5px;margin-top:6px">{{ errName }}</div></sc-if>
+            </div>
+            <div>
+              <input value="{{ fPhone }}" onInput="{{ setPhone }}" placeholder="Телефон" inputmode="tel" style="{{ phoneFieldStyle }}">
+              <sc-if value="{{ errPhone }}" hint-placeholder-val="{{ false }}"><div style="color:#E88;font-size:12.5px;margin-top:6px">{{ errPhone }}</div></sc-if>
+            </div>
+            <label style="display:flex;align-items:flex-start;gap:11px;cursor:pointer;font-size:13px;color:rgba(242,236,224,.6);line-height:1.5">
+              <input type="checkbox" checked="{{ fAgree }}" onChange="{{ toggleAgree }}" style="margin-top:2px;width:17px;height:17px;accent-color:#C6A15B;flex:none">
+              <span>Согласен на обработку персональных данных. Ваши данные не будут переданы третьим лицам.</span>
+            </label>
+            <sc-if value="{{ errAgree }}" hint-placeholder-val="{{ false }}"><div style="color:#E88;font-size:12.5px;margin-top:-8px">{{ errAgree }}</div></sc-if>
+            <button onClick="{{ submit }}" style="padding:16px;border:none;border-radius:12px;background:linear-gradient(135deg,#EAD199,#C6A15B 55%,#A8813C);color:#1a1409;font-weight:600;font-size:15.5px;cursor:pointer;letter-spacing:.02em" style-hover="opacity:.92">Получить бесплатный расчёт</button>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+
+    <!-- contacts + map -->
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <a href="tel:+79882925099" style="text-decoration:none;background:rgba(198,161,91,.07);border:1px solid rgba(198,161,91,.18);border-radius:14px;padding:20px" style-hover="border-color:rgba(198,161,91,.45)">
+          <div style="font-size:12px;color:#C6A15B;letter-spacing:.1em;margin-bottom:8px">ТЕЛЕФОН</div>
+          <div style="font-family:'Playfair Display',serif;font-size:19px;color:#F2ECE0">8 (988) 292-50-99</div>
+        </a>
+        <a href="tel:+79285992020" style="text-decoration:none;background:rgba(198,161,91,.07);border:1px solid rgba(198,161,91,.18);border-radius:14px;padding:20px" style-hover="border-color:rgba(198,161,91,.45)">
+          <div style="font-size:12px;color:#C6A15B;letter-spacing:.1em;margin-bottom:8px">ТЕЛЕФОН</div>
+          <div style="font-family:'Playfair Display',serif;font-size:19px;color:#F2ECE0">8 (928) 599-20-20</div>
+        </a>
+        <div style="background:rgba(198,161,91,.07);border:1px solid rgba(198,161,91,.18);border-radius:14px;padding:20px">
+          <div style="font-size:12px;color:#C6A15B;letter-spacing:.1em;margin-bottom:8px">АДРЕС</div>
+          <div style="font-size:15px;color:#F2ECE0;line-height:1.4">г. Махачкала,<br>ул. Гамидова 16г</div>
+        </div>
+        <a href="mailto:potolki_royal@mail.ru" style="text-decoration:none;background:rgba(198,161,91,.07);border:1px solid rgba(198,161,91,.18);border-radius:14px;padding:20px" style-hover="border-color:rgba(198,161,91,.45)">
+          <div style="font-size:12px;color:#C6A15B;letter-spacing:.1em;margin-bottom:8px">EMAIL</div>
+          <div style="font-size:15px;color:#F2ECE0;word-break:break-all">potolki_royal@mail.ru</div>
+        </a>
+      </div>
+      <div style="flex:1;min-height:260px;border-radius:16px;overflow:hidden;border:1px solid rgba(198,161,91,.22);position:relative">
+        <iframe src="https://maps.google.com/maps?q=%D0%9C%D0%B0%D1%85%D0%B0%D1%87%D0%BA%D0%B0%D0%BB%D0%B0%20%D1%83%D0%BB%20%D0%93%D0%B0%D0%BC%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0%2016%D0%B3&z=16&output=embed" style="width:100%;height:100%;min-height:260px;border:0;filter:grayscale(.4) invert(.9) hue-rotate(180deg) contrast(.9)" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer style="background:#0A0906;border-top:1px solid rgba(198,161,91,.16)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(44px,5vw,60px) clamp(18px,5vw,60px);display:flex;flex-wrap:wrap;gap:30px;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:14px">
+      <span style="width:46px;height:46px;border:1.5px solid #C6A15B;border-radius:50%;display:grid;place-items:center;color:#E4C883;font-family:'Playfair Display',serif;font-size:24px;font-weight:700">R</span>
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;letter-spacing:.26em;color:#F2ECE0">ROYAL</div>
+        <div style="font-size:11px;letter-spacing:.3em;color:#C6A15B;margin-top:3px">18 ЛЕТ НА РЫНКЕ</div>
+      </div>
+    </div>
+    <div style="font-size:13px;color:rgba(242,236,224,.5);line-height:1.7;text-align:right;max-width:420px">
+      <div>© 2007–2026 «Royal» · Натяжные потолки в Махачкале</div>
+      <div>Работаем без выходных · 8:00–20:00 · пожизненная гарантия</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;z-index:90;background:rgba(6,5,3,.94);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px)">
+    <button onClick="{{ closeLb }}" style="position:absolute;top:22px;right:26px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(198,161,91,.4);background:rgba(20,16,10,.7);color:#E4C883;font-size:22px;cursor:pointer;display:grid;place-items:center">✕</button>
+    <button onClick="{{ prevLb }}" style="position:absolute;left:clamp(10px,3vw,40px);top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(198,161,91,.4);background:rgba(20,16,10,.7);color:#E4C883;font-size:22px;cursor:pointer">‹</button>
+    <button onClick="{{ nextLb }}" style="position:absolute;right:clamp(10px,3vw,40px);top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid rgba(198,161,91,.4);background:rgba(20,16,10,.7);color:#E4C883;font-size:22px;cursor:pointer">›</button>
+    <div style="max-width:1000px;width:100%;text-align:center">
+      <sc-if value="{{ lbImg }}" hint-placeholder-val="{{ false }}"><img src="{{ lbImg }}" style="max-width:100%;max-height:76vh;border-radius:12px;margin:0 auto;box-shadow:0 30px 80px -20px rgba(0,0,0,.9)"></sc-if>
+      <div style="font-family:'Playfair Display',serif;font-size:20px;color:#F6F0E4;margin-top:20px">{{ lbCap }}</div>
+    </div>
+  </div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.state = {
+      lb:{open:false,i:0},
+      calc:{area:25, mat:'Матовое', lights:6},
+      form:{name:'',phone:'',agree:false,sent:false,err:{}},
+    };
+    this.matPrices = {'Матовое':1000,'Сатиновое':1250,'Глянцевое':1450,'Фотопечать':2600};
+    this.U='https://potolki-royal.ru/wp-content/uploads/';
+  }
+
+  bg(url){ return "url('"+url+"')"; }
+
+  submitForm(){
+    const f=this.state.form; const err={};
+    if(!f.name.trim()) err.name='Пожалуйста, введите имя';
+    const digits=(f.phone||'').replace(/\D/g,'');
+    if(digits.length<10) err.phone='Введите корректный номер телефона';
+    if(!f.agree) err.agree='Необходимо согласие на обработку данных';
+    if(Object.keys(err).length){ this.setState(s=>({form:{...s.form,err}})); return; }
+    this.setState(s=>({form:{...s.form,sent:true,err:{}}}));
+  }
+
+  renderVals(){
+    const S=this.state, U=this.U, bg=this.bg.bind(this);
+    const fmt=n=>Math.round(n).toLocaleString('ru-RU').replace(/,/g,' ');
+
+    const stats=[
+      {num:'18',label:'лет на рынке'},
+      {num:'20',label:'профессиональных бригад'},
+      {num:'12',label:'лет письменной гарантии'},
+      {num:'6 ч',label:'от замера до монтажа'},
+    ];
+
+    const advantages=[
+      {icon:'🏛',title:'Европейские полотна',text:'Сотрудничаем с ведущими фабриками Франции, Германии, Италии, Бельгии и Голландии — сотни оттенков и фактур на выбор.'},
+      {icon:'📐',title:'Бесплатный замер',text:'Менеджер приедет к вам, снимет замеры и проконсультирует по типу полотна и освещению — абсолютно бесплатно.'},
+      {icon:'✦',title:'Полный комплекс услуг',text:'Продажа, установка, демонтаж старых потолков, замена полотен, слив воды при протечке и фотопечать любой сложности.'},
+      {icon:'🎁',title:'Акции и скидки',text:'Регулярные акции и индивидуальные условия. При заказе от 50 м² дарим узор под люстру.'},
+      {icon:'🛠',title:'Мастера со стажем',text:'Монтажники с солидным опытом и чётким пониманием процесса. Установка потолка — за один день.'},
+      {icon:'⚡',title:'Скорость и оперативность',text:'Работаем без выходных в удобное вам время. От замера до готового потолка — считанные часы.'},
+    ];
+
+    const types=[
+      {name:'Бесшовные', bg:bg(U+'2018/02/02-254x254.jpg')},
+      {name:'Матовые', bg:bg(U+'2018/02/01-254x254.jpg')},
+      {name:'В детскую', bg:bg(U+'2018/02/03-254x254.jpg')},
+      {name:'В санузел', bg:bg(U+'2018/02/04-254x254.jpg')},
+      {name:'Глянцевые', bg:bg(U+'2018/02/07-254x254.jpg')},
+      {name:'Многоуровневые', bg:bg(U+'2018/02/13-254x254.jpg')},
+      {name:'Сатиновые', bg:bg(U+'2018/02/15-254x254.jpg')},
+      {name:'С фотопечатью', bg:bg(U+'2018/02/10-254x254.jpg')},
+    ];
+
+    const gallery=[
+      {cap:'Гостиная · 22 м²', url:U+'2018/02/555-770x440.jpg'},
+      {cap:'Ванная · 12 м²', url:U+'2018/02/22222222222222-770x440.png'},
+      {cap:'Гостиная · 18 м²', url:U+'2018/02/333-770x440.png'},
+      {cap:'Кафе · 32 м²', url:U+'2018/02/444-770x440.jpg'},
+      {cap:'Спальня', url:U+'2018/05/23970074_296659680737960_1875243417911427072_n-770x440.jpg'},
+      {cap:'Холл', url:U+'2018/05/WhatsApp-Image-2018-05-12-at-14.16.57-770x440.jpeg'},
+    ].map((g,i)=>({...g, bg:bg(g.url), open:()=>this.setState({lb:{open:true,i}})}));
+
+    const patterns=[
+      U+'2018/12/1-555x440.jpeg', U+'2018/12/2-497x440.jpeg', U+'2018/12/3-439x440.jpeg',
+      U+'2018/12/4-560x440.jpeg', U+'2018/12/6-548x440.jpeg', U+'2018/12/9-606x440.jpeg',
+    ].map(u=>({bg:bg(u)}));
+
+    const lighting=[
+      {name:'Светодиодная панель 18W', url:U+'2018/05/pl225rnw_0-265x238.jpg'},
+      {name:'Светодиодная панель 15W', url:U+'2018/05/pl200rnw_0-265x238.jpg'},
+      {name:'Светодиодная панель 6W', url:U+'2018/05/images.jpg'},
+      {name:'Светильник GX-53 хром', url:U+'2018/05/8fx-145x144.jpg'},
+      {name:'Светильник GX-53 золото', url:U+'2018/05/Svetilnik-Ecola-GX53-H4-Downlight-ploskiy-Zoloto-600x600-145x144.jpg'},
+      {name:'Светильник GX-53 бронза', url:U+'2018/05/124dac85fa0480e508699b4b34cbb82a-145x144.jpg'},
+    ].map(l=>({...l, bg:bg(l.url)}));
+
+    const examples=[
+      {title:'Матовый потолок в ванную · 4,5 м²', url:U+'2018/05/WhatsApp-Image-2018-05-14-at-15.31.52-320x201.jpeg', old:'7 255 ₽', now:'6 355 ₽',
+       rows:[{k:'Площадь',v:'4,5 м²'},{k:'Обработка угла',v:'8 шт'},{k:'Профиль алюм.',v:'10 м'},{k:'Закладные',v:'4 шт'},{k:'Полотно',v:'MSD premium'},{k:'Цвет',v:'Белый мат'}]},
+      {title:'Глянцевый потолок в гостиную · 17,5 м²', url:U+'2018/05/belyj-glyantsevyj-natyazhnoj-potolok-v-gostinoj-320x201.jpg', old:'9 050 ₽', now:'7 300 ₽',
+       rows:[{k:'Площадь',v:'17,5 м²'},{k:'Обработка угла',v:'4 шт'},{k:'Профиль алюм.',v:'17,5 м'},{k:'Вырез под люстру',v:'1 шт'},{k:'Полотно',v:'MSD premium'},{k:'Цвет',v:'Белый глянец'}]},
+      {title:'Глянцевый потолок в прихожую · 10 м²', url:U+'2018/05/natyazhnoy-potolok-v-prikhozhey-foto_32-320x201.jpg', old:'7 770 ₽', now:'6 370 ₽',
+       rows:[{k:'Площадь',v:'10 м²'},{k:'Обработка угла',v:'4 шт'},{k:'Профиль алюм.',v:'13 м'},{k:'Маск. лента',v:'13 м'},{k:'Полотно',v:'MSD premium'},{k:'Цвет',v:'Белый глянец'}]},
+    ].map(e=>({...e, bg:bg(e.url)}));
+
+    const reviews=[
+      {name:'Амина', initial:'А', tag:'instagram · клиент', text:'Обратилась по совету подруги — купили квартиру в новостройке, ремонт нужен был срочно. Попали под акцию, сразу −10%. Мастера приехали через 3 дня после договора, сделали быстро, чисто, красиво. Осталась очень довольна.'},
+      {name:'Руслан', initial:'Р', tag:'клиент', text:'Спасибо огромное, всё на уровне! Замер сделали профессионально и чётко, интересно проконсультировали. Установщики сработали красиво, быстро и аккуратно. Будем обращаться ещё.'},
+      {name:'Марьям', initial:'М', tag:'instagram · клиент', text:'Долго выбирала между натяжным и гипсокартонным потолком. После консультации в Royal выбор определился сам собой — рассказали все плюсы и минусы, помогли с фактурой. Установили очень быстро. Желаю компании роста!'},
+    ];
+
+    // calculator
+    const base=this.matPrices[S.calc.mat]||1000;
+    const ceilingCost=base*S.calc.area;
+    const lightsCost=S.calc.lights*390;
+    const total=ceilingCost+lightsCost;
+    const materialOpts=Object.keys(this.matPrices).map(m=>{
+      const active=m===S.calc.mat;
+      return {
+        name:m,
+        priceLabel:'от '+fmt(this.matPrices[m])+' ₽/м²',
+        pick:()=>this.setState(s=>({calc:{...s.calc,mat:m}})),
+        style:'display:flex;flex-direction:column;align-items:flex-start;text-align:left;padding:14px 16px;border-radius:12px;cursor:pointer;transition:all .2s;'+
+          (active
+            ? 'background:linear-gradient(135deg,rgba(234,209,153,.22),rgba(168,129,60,.16));border:1px solid #C6A15B;color:#F6F0E4'
+            : 'background:rgba(198,161,91,.05);border:1px solid rgba(198,161,91,.18);color:rgba(242,236,224,.75)')
+      };
+    });
+
+    // lightbox
+    const g=gallery[S.lb.i]||{};
+
+    // form
+    const fieldBase='width:100%;padding:15px 18px;border-radius:12px;background:rgba(10,8,5,.6);color:#F2ECE0;font-size:15px;outline:none;transition:border-color .2s;';
+    const nameFieldStyle=fieldBase+'border:1px solid '+(S.form.err.name?'#c56':'rgba(198,161,91,.3)');
+    const phoneFieldStyle=fieldBase+'border:1px solid '+(S.form.err.phone?'#c56':'rgba(198,161,91,.3)');
+
+    return {
+      stats, advantages, types, gallery, patterns, lighting, examples, reviews,
+      // lightbox
+      lbOpen:S.lb.open, lbImg:g.url, lbCap:g.cap,
+      closeLb:()=>this.setState(s=>({lb:{...s.lb,open:false}})),
+      prevLb:()=>this.setState(s=>({lb:{open:true,i:(s.lb.i-1+gallery.length)%gallery.length}})),
+      nextLb:()=>this.setState(s=>({lb:{open:true,i:(s.lb.i+1)%gallery.length}})),
+      // calc
+      calcArea:S.calc.area, calcMat:S.calc.mat, calcLights:S.calc.lights, materialOpts,
+      setArea:(e)=>{const v=Number(e.target.value);this.setState(s=>({calc:{...s.calc,area:v}}))},
+      setLights:(e)=>{const v=Number(e.target.value);this.setState(s=>({calc:{...s.calc,lights:v}}))},
+      ceilingStr:fmt(ceilingCost)+' ₽', lightsStr:fmt(lightsCost)+' ₽',
+      totalStr:fmt(total)+' ₽', pricePerM:fmt(base)+' ₽/м²',
+      // form
+      fName:S.form.name, fPhone:S.form.phone, fAgree:S.form.agree, fSent:S.form.sent,
+      showForm:!S.form.sent,
+      errName:S.form.err.name, errPhone:S.form.err.phone, errAgree:S.form.err.agree,
+      nameFieldStyle, phoneFieldStyle,
+      setName:(e)=>{const v=e.target.value;this.setState(s=>({form:{...s.form,name:v,err:{...s.form.err,name:undefined}}}))},
+      setPhone:(e)=>{const v=e.target.value;this.setState(s=>({form:{...s.form,phone:v,err:{...s.form.err,phone:undefined}}}))},
+      toggleAgree:()=>this.setState(s=>({form:{...s.form,agree:!s.form.agree,err:{...s.form.err,agree:undefined}}})),
+      submit:()=>this.submitForm(),
+    };
+  }
+}
+</script>
+<script>
+(async () => {
+  if (!document.title || !document.title.trim()) document.title = "Royal";
+  // Prepend so page-supplied @page / break rules (deck-stage's margin:0,
+  // author CSS) keep source-order precedence over the baseline.
+  const baseCss = document.createElement('style');
+  baseCss.textContent = "@media print {\n  figure, table { break-inside: avoid; }\n  *, *::before, *::after {\n    print-color-adjust: exact; -webkit-print-color-adjust: exact;\n    backdrop-filter: none !important; -webkit-backdrop-filter: none !important;\n    animation-delay: -99s !important; animation-duration: .001s !important;\n    animation-iteration-count: 1 !important; animation-fill-mode: both !important;\n    animation-play-state: running !important; transition-duration: 0s !important;\n  }\n}";
+  document.head.prepend(baseCss);
+  if (document.readyState === 'loading') {
+    await new Promise((r) => document.addEventListener('DOMContentLoaded', r, { once: true }));
+  }
+  let ds = document.querySelector('deck-stage');
+  // whenDefined never resolves when nothing registers the element, so only
+  // await it when a <deck-stage> tag exists (and race a timeout regardless).
+  if (ds && !customElements.get('deck-stage')) {
+    try {
+      await Promise.race([
+        customElements.whenDefined('deck-stage'),
+        new Promise((r) => setTimeout(r, 3000)),
+      ]);
+    } catch (e) {}
+    ds = document.querySelector('deck-stage');
+  }
+  // dc-runtime assigns window.DCLogic at init and mounts into #dc-root on
+  // DOMContentLoaded; settle on that subtree so React has rendered before
+  // print(). Non-DC pages fall through to weighing body.
+  const isDc = !ds && 'DCLogic' in window;
+  const settleRoot = ds || (isDc ? document.getElementById('dc-root') : null) || document.body;
+  if (settleRoot) {
+    // Weigh only content children — skip script/style/template so inline
+    // Babel/CSS doesn't register as stable "content" before the framework
+    // has mounted anything.
+    const MEDIA = 'img,svg,canvas,video,picture,iframe,embed,object';
+    const weigh = () => {
+      let text = 0, media = 0;
+      for (const c of settleRoot.children) {
+        const t = c.tagName;
+        if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+        text += (c.textContent || '').trim().length;
+        media += c.querySelectorAll(MEDIA).length + (c.matches(MEDIA) ? 1 : 0);
+      }
+      return text + media * 100;
+    };
+    // "Non-zero and stable" alone is not sufficient to mean rendered: generic
+    // body can carry a static shell while async main content is pending, and
+    // #dc-root can carry the root DC's static text while child refs are still
+    // .sc-placeholder boxes. Gate generic on readyState 'complete', and never
+    // accept stability while a dc-runtime placeholder is present.
+    const isGeneric = settleRoot === document.body;
+    const deadline = Date.now() + 15000;
+    let last = -1, stable = 0;
+    while (Date.now() < deadline) {
+      const n = weigh();
+      const ready =
+        (!isGeneric || document.readyState === 'complete') &&
+        !settleRoot.querySelector('.sc-placeholder');
+      if (n > 0 && n === last && ready) { if (++stable >= 2) break; } else { stable = 0; }
+      last = n;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+  // Project support.js may predate runtime default-seeding; push via bridge.
+  if (isDc && window.__dcSetProps && window.__dcRootName) {
+    try {
+      const dpEl = document.querySelector('script[data-dc-script]');
+      const meta = JSON.parse((dpEl && dpEl.getAttribute('data-props')) || '{}');
+      const bag = {};
+      for (const k in meta)
+        if (k[0] !== '$' && meta[k] && meta[k].default !== undefined)
+          bag[k] = meta[k].default;
+      if (Object.keys(bag).length) {
+        window.__dcSetProps(window.__dcRootName(), bag);
+        await new Promise((r) => setTimeout(r, 50));
+      }
+    } catch (e) {}
+  }
+  // Reveal content gated on scroll or visibility before printing. Lazy <img>,
+  // IntersectionObserver fade-ins, and collapsed <details> don't render while
+  // off-screen, so a long page would print with them blank or closed. Open
+  // every <details>, force native-lazy images eager, and scroll the document
+  // through its full height to trip lazy-load + IO; then wait (bounded) for the
+  // newly-triggered images. Inert for deck-stage (slides aren't scroll-gated).
+  try {
+    for (const d of document.querySelectorAll('details')) d.open = true;
+    for (const img of document.querySelectorAll('img[loading="lazy"]'))
+      img.loading = 'eager';
+    const scroller = document.scrollingElement || document.documentElement;
+    const full = Math.max(scroller.scrollHeight, document.body.scrollHeight);
+    const step = window.innerHeight || 800;
+    for (let y = 0; y <= full; y += step) {
+      window.scrollTo(0, y);
+      await new Promise((r) => requestAnimationFrame(r));
+    }
+    window.scrollTo(0, 0);
+    await Promise.race([
+      Promise.all(
+        [...document.images].map((img) =>
+          img.complete
+            ? null
+            : new Promise((res) => {
+                img.addEventListener('load', res, { once: true });
+                img.addEventListener('error', res, { once: true });
+              })
+        )
+      ),
+      new Promise((r) => setTimeout(r, 4000)),
+    ]);
+  } catch (e) {}
+  try { await document.fonts.ready; } catch (e) {}
+  // Jump every animation to its end state so print() never captures a slide
+  // mid-entrance. Ordering matters: the 0s-transition style must be live
+  // BEFORE data-deck-active is set so attribute-keyed transitions don't
+  // start a (now-0s) run from the pre-active base.
+  const st = document.createElement('style');
+  st.textContent = '*,*::before,*::after{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}';
+  document.head.appendChild(st);
+  for (const d of document.querySelectorAll('deck-stage')) {
+    for (const c of d.children) {
+      const t = c.tagName;
+      if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+      c.setAttribute('data-deck-active', '');
+    }
+  }
+  // Re-append deck-stage's @page last so no author @page can add a margin and
+  // spill each full-bleed slide onto two sheets. Backstop for old copies.
+  if (ds) {
+    let pg = document.getElementById('deck-stage-print-page');
+    if (!pg) {
+      pg = document.createElement('style');
+      pg.textContent = '@page{size:' + (+ds.getAttribute('width') || 1920) +
+        'px ' + (+ds.getAttribute('height') || 1080) + 'px;margin:0}';
+    }
+    document.body.appendChild(pg);
+  }
+  try {
+    const sweep = () => {
+      for (const a of document.getAnimations()) {
+        try { a.finish(); } catch (e) {
+          try { a.currentTime = (a.effect && a.effect.getComputedTiming().duration) || 0; a.pause(); } catch (e2) {}
+        }
+      }
+    };
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+    sweep();
+    await new Promise((r) => requestAnimationFrame(r));
+  } catch (e) {}
+  // Size the PDF page to the rendered design unless the file opted into
+  // standard paper via @page{size:letter|A4|…}. Decks own their own @page.
+  // Wrappers (body, …) lose padding+margin so the frame sits at (0,0); the
+  // frame itself loses only margin — its padding is INSIDE the measured
+  // rect and must stay, or content shifts and leaves a gap at bottom/right.
+  var __m = null;
+  try { __m = (() => {
+  var STAMP = true;
+  var docEl = document.documentElement;
+  var doc = { width: docEl.scrollWidth, height: docEl.scrollHeight };
+
+  var ds = document.querySelector('deck-stage');
+  if (ds) {
+    var dw = Number(ds.getAttribute('width')) || 1920;
+    var dh = Number(ds.getAttribute('height')) || 1080;
+    var n = typeof ds.length === 'number' ? ds.length : ds.children.length;
+    var idx = typeof ds.index === 'number' ? ds.index : 0;
+    var frames = [];
+    for (var i = 0; i < n; i++) frames.push({ left: 0, top: 0, width: dw, height: dh });
+    return { kind: 'deck', source: 'declared', doc: doc, frames: frames,
+      authored: frames.map(function(){return{width:true,height:true}}),
+      deck: { width: dw, height: dh, slideCount: n, index: idx },
+      signals: { paperPage: false, pxPage: false } };
+  }
+
+  // Declared kind: a doc-page tag names the kind outright, so no signal
+  // heuristics run (like the deck branch above, signals report false —
+  // they describe inferred classifications only). The tag alone is not
+  // trusted: the element must have upgraded (shadowRoot present), so a
+  // leftover tag whose script was deleted falls through to the heuristics
+  // that handle plain markup.
+  var stageSx = window.scrollX || 0, stageSy = window.scrollY || 0;
+  var dp = document.querySelector('doc-page');
+  if (dp && dp.shadowRoot) {
+    // Crop to the sheet, not the host — the desk around it is screen-only
+    // chrome that must not land in PNG exports.
+    var sheet = dp.shadowRoot.querySelector('.sheet');
+    var sr = (sheet || dp).getBoundingClientRect();
+    return { kind: 'paper-doc', source: 'declared', doc: doc,
+      frames: [{ left: sr.left + stageSx, top: sr.top + stageSy,
+        width: sr.width, height: sr.height }],
+      authored: [{ width: false, height: false }],
+      signals: { paperPage: false, pxPage: false } };
+  }
+  var paperPage = false, pxPage = false;
+  var eachRule = function (fn) {
+    for (var s = 0; s < document.styleSheets.length; s++) {
+      var rs; try { rs = document.styleSheets[s].cssRules; } catch (e) { continue; }
+      for (var r = 0; r < rs.length; r++) {
+        fn(rs[r]);
+        if (rs[r].cssRules) for (var n = 0; n < rs[r].cssRules.length; n++) fn(rs[r].cssRules[n]);
+      }
+    }
+  };
+  eachRule(function (r) {
+    if (r.type !== 6) return;
+    var m = /\bsize\s*:\s*([^;}]+)/i.exec(r.cssText || '');
+    if (!m) return;
+    if (/\b(letter|a[3-5]|legal|ledger)\b/i.test(m[1])) paperPage = true;
+    if (/\d+(?:\.\d+)?px\b/i.test(m[1])) pxPage = true;
+  });
+  var signals = { paperPage: paperPage, pxPage: pxPage };
+
+  var pxVal = function (v) {
+    var m = /^(\d+(?:\.\d+)?)px$/.exec(v || ''); return m ? +m[1] : 0;
+  };
+  var authoredPx = function (el, prop) {
+    if (pxVal(el.style[prop])) return true;
+    var attr = el.getAttribute(prop);
+    if (attr && /^\d+$/.test(attr)) return true;
+    var hit = false;
+    eachRule(function (r) {
+      if (hit || r.type !== 1 || !r.style) return;
+      try { if (el.matches(r.selectorText) && pxVal(r.style[prop])) hit = true; } catch (e) {}
+    });
+    return hit;
+  };
+
+  var el = document.body, rootPxW = false;
+  for (;;) {
+    var kids = [];
+    for (var c = 0; c < el.children.length; c++) {
+      var t = el.children[c].tagName;
+      if (t !== 'SCRIPT' && t !== 'STYLE' && t !== 'TEMPLATE') kids.push(el.children[c]);
+    }
+    if (kids.length !== 1 || !(kids[0] instanceof HTMLElement)) break;
+    if (STAMP) el.setAttribute('data-om-frame-wrap', '');
+    el = kids[0];
+    rootPxW = authoredPx(el, 'width');
+    if (rootPxW) break;
+  }
+  if (!rootPxW) rootPxW = authoredPx(el, 'width');
+
+  // @page{size:letter} alone is a flowing doc; with a px-width root it's a
+  // fixed sheet pretending to be paper — fall through and size to render.
+  if (paperPage && !rootPxW) {
+    return { kind: 'paper-doc', source: 'inferred', doc: doc, signals: signals,
+      frames: [{ left: 0, top: 0, width: doc.width, height: doc.height }],
+      authored: [{ width: false, height: false }] };
+  }
+
+  var sx = window.scrollX || 0, sy = window.scrollY || 0;
+  var rectOf = function (e) {
+    var r = e.getBoundingClientRect();
+    var oy; try { oy = getComputedStyle(e).overflowY; } catch (err) {}
+    var h = oy === 'visible' ? Math.max(r.height, e.scrollHeight || 0) : r.height;
+    return { left: r.left + sx, top: r.top + sy, width: r.width, height: h };
+  };
+
+  // Multi-frame: ≥2 visible non-fixed children, each with authored px width
+  // AND height, all within ±2px of each other. Off unless the page opts in
+  // via data-om-multi-frame on the stop element — guards against card grids
+  // and pricing tables that match the geometry but aren't separate canvases.
+  if (el.hasAttribute('data-om-multi-frame')) {
+    var cands = [];
+    for (var k = 0; k < el.children.length; k++) {
+      var ch = el.children[k];
+      var cs; try { cs = getComputedStyle(ch); } catch (e) { continue; }
+      if (cs.display === 'none' || cs.visibility === 'hidden' || cs.position === 'fixed') continue;
+      var rc = rectOf(ch);
+      if (rc.width < 2 || rc.height < 2) continue;
+      if (!authoredPx(ch, 'width') || !authoredPx(ch, 'height')) continue;
+      cands.push(rc);
+    }
+    if (cands.length >= 2) {
+      var w0 = cands[0].width, h0 = cands[0].height, ok = true;
+      for (var q = 1; q < cands.length; q++)
+        if (Math.abs(cands[q].width - w0) > 2 || Math.abs(cands[q].height - h0) > 2) ok = false;
+      if (ok) return { kind: 'multi-frame', source: 'inferred', doc: doc, signals: signals,
+        frames: cands, authored: cands.map(function(){return{width:true,height:true}}) };
+    }
+  }
+
+  if (STAMP) el.setAttribute('data-om-frame', '');
+  return { kind: 'single-canvas', source: 'inferred', doc: doc, signals: signals,
+    frames: [rectOf(el)],
+    authored: [{ width: rootPxW, height: authoredPx(el, 'height') }] };
+})(); } catch (e) {}
+  var frame = null;
+  if (__m && __m.kind === 'single-canvas') {
+    var f = __m.frames && __m.frames[0];
+    if (f && f.width >= 200 && f.height >= 200) {
+      frame = f;
+      var fst = document.createElement('style');
+      fst.textContent = '@media print{@page{size:' + Math.ceil(f.width) + 'px ' +
+        Math.ceil(f.height) + 'px;margin:0}' +
+        'html,body,[data-om-frame-wrap]{padding:0!important;margin:0!important;background:none!important}' +
+        '[data-om-frame]{margin:0!important}}';
+      document.body.appendChild(fst);
+    }
+  }
+  // Relax break-inside on oversized elements. An element taller than a
+  // printable page can't honor break-inside: avoid — browsers either overflow
+  // it or push it whole to the next page, leaving a blank gap, then break it
+  // anyway at an arbitrary point. After the final layout (content revealed,
+  // animations jumped), find elements taller than a page that still compute
+  // break-inside: avoid and reset them to auto, so the browser breaks them at
+  // their children's boundaries instead (children keep their own avoid). PAGE_PX
+  // is a conservative portrait estimate at 96 CSS px/in — Letter/A4 usable
+  // height minus our 0.5in margins — so only clearly-oversized elements are
+  // touched and under-page elements still stay whole. Skipped for decks (slides
+  // are sized to the page) and for fixed-size canvases (frame set, or an author
+  // px-based @page) — runs as before for flowing docs on letter/A4.
+  try {
+    if (!ds && !frame && !(__m && __m.signals && __m.signals.pxPage)) {
+      const PAGE_PX = 1024;
+      // Our print defaults add a real @page margin only when the source has
+      // no @page of its own; computed style can't tell us (it reports screen
+      // media), so read the injected rule directly.
+      const defaults = document.querySelector('style[data-omelette-print-defaults]');
+      const pageInset = /@page\s*\{[^}]*margin/.test(defaults ? defaults.textContent || '' : '');
+      const SEL = 'section,article,figure,table,pre,blockquote,[class~="card" i],[class~="page" i],[class~="sheet" i]';
+      for (const el of document.body.querySelectorAll(SEL)) {
+        if (el instanceof HTMLElement && el.offsetHeight > PAGE_PX) {
+          el.setAttribute('data-om-oversized', '');
+          // Fake-paged docs simulate sheets with over-tall break-after:page
+          // boxes; honoring the break spills half-blank pages and ends a
+          // colored box mid-sheet. Flow them, and (only when we own the page
+          // inset) drop the redundant padding/background via the rule below.
+          const cs = getComputedStyle(el);
+          if (cs.breakAfter === 'page' || cs.pageBreakAfter === 'always') {
+            el.setAttribute('data-om-fakepage', '');
+          }
+        }
+      }
+      const ost = document.createElement('style');
+      ost.textContent = '@media print{' +
+        '[data-om-oversized]{break-inside:auto !important;page-break-inside:auto !important}' +
+        '[data-om-fakepage]{break-after:auto !important;page-break-after:auto !important}' +
+        (pageInset ? '[data-om-fakepage]{padding:0 !important;background:none !important}' : '') +
+        '}';
+      document.head.appendChild(ost);
+    }
+  } catch (e) {}
+  // macOS Preview renders Skia-PDF Luminosity soft-masks as opaque grey boxes;
+  // swap the CSS that triggers them for Preview-safe forms.
+  try {
+    for (const el of document.body.querySelectorAll('*')) {
+      const cs = getComputedStyle(el);
+
+      if (cs.boxShadow !== 'none' && cs.filter === 'none') {
+        const outs = [], kept = [];
+        for (const s of cs.boxShadow.split(/,(?![^(]*[)])/)) {
+          const t = s.trim();
+          const m = t.match(/^(rgba?[(][^)]+[)]) (-?[0-9.]+px) (-?[0-9.]+px) ([0-9.]+px) -?[0-9.]+px$/);
+          if (m && parseFloat(m[4]) > 0) outs.push('drop-shadow(' + m[2] + ' ' + m[3] + ' ' + m[4] + ' ' + m[1] + ')');
+          else kept.push(t);
+        }
+        if (outs.length) {
+          el.style.setProperty('filter', outs.join(' '), 'important');
+          el.style.setProperty('box-shadow', kept.join(', ') || 'none', 'important');
+        }
+      }
+
+      const mask = cs.maskImage && cs.maskImage !== 'none' ? cs.maskImage : cs.webkitMaskImage;
+      if (mask && mask !== 'none' && cs.filter === 'none') el.style.setProperty('filter', 'opacity(1)', 'important');
+    }
+  } catch (e) {}
+  setTimeout(() => { try { window.print(); } catch (e) {} }, 200);
+})();
+</script>
+</body>
+</html>
